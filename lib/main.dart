@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paypal_flutter/manager.dart';
+import 'SuccessPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Paypal Test'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MyHomePage(title: "Flutter PayPal test"),
+        '/success': (context) => SuccessPage(),
+      },
     );
   }
 }
